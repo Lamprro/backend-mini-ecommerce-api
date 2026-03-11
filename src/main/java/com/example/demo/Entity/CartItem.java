@@ -28,7 +28,7 @@ public class CartItem {
     @Column (name = "quantity",nullable = false)
     @Min(value = 1, message = "quantity must be non-negative")
     @NotNull (message = "quantity is required")
-    private Double quantity;
+    private int quantity;
 
     @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "cart_id", nullable = false)

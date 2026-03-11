@@ -40,7 +40,7 @@ public class Products {
     @Column (name = "stock",nullable = false)
     @Min(value = 0, message = "stock must be non-negative")
     @NotNull (message = "stock is required")
-    private Integer stock;
+    private int stock;
 
     @Column (name = "thumbnail")
     private String thumbnail;
