@@ -14,3 +14,11 @@
    Công cụ: Gemini 3.0
    Prompt: "Xử lí và kiểm tra các file service"
    Sau đó tôi làm gì: Xem và sửa lỗi sao cho logic với hệ thống.
+5. Ngày giờ: 15/03/2026 14:30
+   Công cụ: Gemini 3.0
+   Prompt: "Kiểm tra lại lỗi các file controller "
+   Sau đó tôi làm gì: Sửa lại những lỗi thiếu logic.
+6. Ngày giờ: 15/03/2026 15:53
+   Công cụ: Gemini 3.0
+   Prompt: "Kiểm tra lại toàn bộ các file hệ thống"
+   Sau đó tôi làm gì: Xem lại và chỉnh sửa và thực hiện test các endpoint.
