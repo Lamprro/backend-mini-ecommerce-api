@@ -33,4 +33,5 @@ public class CartItem {
     @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn (name = "cart_id", nullable = false)
     private Cart cart;
+
 }
