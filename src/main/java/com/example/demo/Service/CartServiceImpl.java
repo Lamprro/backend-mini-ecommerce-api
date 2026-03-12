@@ -104,19 +104,20 @@ public class CartServiceImpl implements CartService {
         return cartItemRepository.save(cartItem);
     }
 
-@Transactional
-@Override
-public Cart clearCart(Long userId) {
-    Cart cart = getCartByUserId(userId);
+    @Transactional
+    @Override
+    public Cart clearCart(Long userId) {
+        Cart cart = getCartByUserId(userId);
 
-    for (CartItem item : cart.getItems()) {
-        Products products = item.getProducts();
-        products.setStock(products.getStock() + item.getQuantity());
-        productsRepository.save(products);
+        for (CartItem item : cart.getItems()) {
+            Products products = item.getProducts();
+            products.setStock(products.getStock() + item.getQuantity());
+            productsRepository.save(products);
+        }
+        cartItemRepository.deleteAll(cart.getItems());
+        cart.getItems().clear();
+        return cartRepository.save(cart);
     }
-    cartItemRepository.deleteAll(cart.getItems());
-    cart.getItems().clear();
-    return cartRepository.save(cart);
 }
-}
+
 

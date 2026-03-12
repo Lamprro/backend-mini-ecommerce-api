@@ -1,5 +1,6 @@
 package com.example.demo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -22,7 +23,7 @@ public class CartItem {
 
     @NotNull (message = "product is required")
     @JoinColumn (name = "products_id",nullable = false)
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne ()
     private Products products;
 
     @Column (name = "quantity",nullable = false)
@@ -30,7 +31,8 @@ public class CartItem {
     @NotNull (message = "quantity is required")
     private int quantity;
 
-    @ManyToOne (fetch = FetchType.LAZY)
+    @JsonIgnore
+    @ManyToOne ()
     @JoinColumn (name = "cart_id", nullable = false)
     private Cart cart;
 
