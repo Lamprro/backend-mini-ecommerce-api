@@ -5,8 +5,8 @@ Dự án cung cấp RESTful API quản lý sản phẩm và giỏ hàng, đượ
 
 ## 🚀 Công nghệ sử dụng
 
-*   **Java**: 17 hoặc 21
-*   **Framework**: Spring Boot 3.x
+*   **Java**: 17 
+*   **Framework**: Spring Boot 3.5.11
 *   **Build Tool**: Maven
 *   **Database**: H2 Database (In-memory)
 *   **Thư viện khác**: Spring Data JPA, Lombok, Validation
@@ -108,3 +108,4 @@ src/main/java/com/example/demo/
 ## 📝 Ghi chú về AI
 
 Quá trình phát triển có sử dụng sự hỗ trợ của AI. Chi tiết xem tại file `AI_USAGE.md`.
+
